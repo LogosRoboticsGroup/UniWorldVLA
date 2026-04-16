@@ -1,0 +1,3 @@
+[submodule "DA3"]
+	path = DA3
+	url = https://github.com/ByteDance-Seed/depth-anything-3

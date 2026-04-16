@@ -1,0 +1,74 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+*.pyc
+*.pyo
+
+# ===== Environment =====
+.env
+.venv
+env/
+venv/
+ENV/
+
+# ===== Editors =====
+*.swp
+*~
+.idea/
+.vscode/
+*.iml
+
+# ===== OS =====
+.DS_Store
+Thumbs.db
+
+# ===== Logs / temp =====
+*.log
+_temp
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+Gemfile.lock
+vendor/
+node_modules/
+
+# ===== WandB =====
+wandb/*
+wandb-*
+*.wandb
+
+# ===== Large binary / model files =====
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.ckpt
+*.gif
+
+# ===== Data & cache =====
+dataset/
+checkpoints/
+pretrained_models/
+depth_cache*/
+*.pkl
+*.csv
+
+# ===== Project-specific =====
+pwm-*/
+resume_checkpoint/*
+Local_8/*
+seq_output/local/*
+match_images/*
+dev_utils/*
+
+# ===== Exceptions (keep these tracked) =====
+!requirements.txt
+!environment.yaml
