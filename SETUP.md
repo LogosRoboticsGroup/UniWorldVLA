@@ -35,7 +35,7 @@ UniWorldVLA/
 │       ├── navsim_logs/
 │       ├── maps/
 │       └── ...
-├── depth_cache_8_futrue_frame_flash/   # DA3 depth cache (generated or downloaded)
+├── depth_cache_8_futrue_frame_flash/   # DA3 depth cache (self-generated, not released)
 │   └── {scene_token}.pt
 ├── configs/
 ├── models/
@@ -157,19 +157,11 @@ depth_cache_8_futrue_frame_flash/    # note: "futrue" is a typo in the original 
 └── {scene_token}.pt                 # one file per NavSim scene token
 ```
 
-### Option A: Download pre-computed cache (recommended)
+> **Note:** The pre-computed depth cache is **not released** due to its large size. You need to generate it yourself using DA3 on the raw NavSim data (see below).
 
-Running DA3-GIANT over the full NavSim training set is time-consuming. Download the pre-computed cache directly from HuggingFace:
+### Generate from scratch
 
-```bash
-huggingface-cli download SII-Rigby/UniWorldVLA \
-  --include "depth_cache_8_futrue_frame_flash/*" \
-  --local-dir .
-```
-
-### Option B: Generate from scratch
-
-If the cache has not yet been released, or you need to regenerate it on your own NavSim data, use the following command to do a **dry run over the training set** — no model training or inference is performed:
+Use the following command to do a **dry run over the training set** — no model training or inference is performed:
 
 ```bash
 EVAL_ONLY=1 RUN_FLASH_DATA_LOADER=1 \

@@ -168,7 +168,7 @@ Evaluation computes:
 
 - [x] Release arXiv paper
 - [x] Release code
-- [ ] Release model weights
+- [x] Release model weights
 
 ---
 
